@@ -11,8 +11,9 @@ def fetch_lyrics(query: str, synced_only: bool = True, lang: str = None, save_pa
     try:
         logger.info(f"Searching lyrics for: {query} | lang={lang}")
 
+        # Build correct arguments
         search_args = {
-            "query": query,
+            "search_term": query,     
             "synced_only": synced_only,
             "save_path": save_path
         }
@@ -20,6 +21,7 @@ def fetch_lyrics(query: str, synced_only: bool = True, lang: str = None, save_pa
         if lang:
             search_args["lang"] = lang  
 
+        # Call syncedlyrics properly
         lyrics = syncedlyrics.search(**search_args)
 
         if not lyrics:
