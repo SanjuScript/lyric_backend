@@ -1,0 +1,47 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.pyc
+*.pdb
+*.egg-info/
+*.egg
+*.log
+
+# Environment
+.env
+venv/
+.env.local
+.env.*.local
+
+# VS Code / PyCharm / IDE stuff
+.vscode/
+.idea/
+
+# OS generated files
+.DS_Store
+Thumbs.db
+
+# Dependencies and build
+*.sqlite3
+build/
+dist/
+
+# Render / Deployment specific
+*.db
+*.pid
+
+# Cached data
+.cache/
+.pytest_cache/
+
+# Temporary files
+*.tmp
+*.bak
+*.swp
+*.swo
+
+# Local config
+config/
+secrets.json
