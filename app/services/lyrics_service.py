@@ -32,6 +32,8 @@ def fetch_lyrics(
             "synced_only": synced_only,
             "plain_only": plain_only,
             "enhanced": enhanced,
+            # Limit to fast & stable providers. Exclude Megalobiz due to frequent timeouts.
+            "providers": ["Musixmatch", "Lrclib", "NetEase", "Genius"],
         }
 
         # Only add lang if provided — passing lang=None causes issues
